@@ -1,10 +1,13 @@
 package io.zipcoder;
 
 
+
+
 /**
  * @author tariq
  */
 public class StringsAndThings {
+
 
     /**
      * Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count,
@@ -14,10 +17,18 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
-        return null;
+    public Integer countYZ(String input) {
+        String [] arr = input.split(" ");
+        
+        int count = 0;
+        
+        for (String word : arr) {
+            if (word.charAt(word.length() -1 ) == 'y' || word.charAt(word.length() -1) == 'z')
+            count++;
+        }
+        
+        return count;
     }
-
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
      * been removed (not case sensitive). You may assume that the remove string is length 1 or more.
@@ -27,8 +38,9 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
-    public String removeString(String base, String remove){
-        return null;
+    public String removeString(String base, String remove) {
+        String replacement;
+        return base.replaceAll(remove, "");
     }
 
     /**
@@ -42,7 +54,7 @@ public class StringsAndThings {
     public Boolean containsEqualNumberOfIsAndNot(String input){
         return null;
     }
-
+    
     /**
      * We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
      * Return true if all the g's in the given string are happy.
@@ -51,6 +63,7 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
+      
         return null;
     }
 
